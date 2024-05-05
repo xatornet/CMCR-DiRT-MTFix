@@ -55,7 +55,7 @@ else {
 			Write-Host "WARNING - YOUR INGAME SETTINGS WILL RESET"
 			Write-Host ""
             Delay 3
-            Copy-Item -Path ".\PatchingD\CMCR-DiRT-MTFix-main\Files\*" -Destination ".\" -Recurse -Force -ErrorAction SilentlyContinue
+            Copy-Item -Path ".\PatchingD\CMCR-DiRT-MTFix-Windows\Files\*" -Destination ".\" -Recurse -Force -ErrorAction SilentlyContinue
             Remove-Item -Path "$env:userprofile\Documents\Codemasters\DiRT\hardwaresettings\*.xml" -Force -ErrorAction SilentlyContinue
 			
 			# Obtener el número de cores lógicos del CPU
