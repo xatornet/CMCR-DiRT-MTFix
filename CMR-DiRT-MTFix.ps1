@@ -1,6 +1,6 @@
 $pingCount = 4
 $ntcorepatch = "https://ntcore.com/files/4gb_patch.zip"
-$DirtMTFix = "https://github.com/xatornet/CMCR-DiRT-MTFix/archive/refs/heads/main.zip"
+$DirtMTFix = "https://github.com/xatornet/CMCR-DiRT-MTFix/archive/refs/heads/Windows.zip"
 
 # Function to simulate a delay
 function Delay {
@@ -47,8 +47,8 @@ else {
 			Clear-Host
 			Write-Host "Downloading Required Files"
 			New-Item -ItemType Directory -Path ".\PatchingD" | Out-Null
-			Invoke-WebRequest -Uri $DirtMTFix -OutFile ".\PatchingD\main.zip"
-			Expand-Archive ".\PatchingD\main.zip" ".\PatchingD\" | Out-Null
+			Invoke-WebRequest -Uri $DirtMTFix -OutFile ".\PatchingD\Windows.zip"
+			Expand-Archive ".\PatchingD\Windows.zip" ".\PatchingD\" | Out-Null
 			Write-Host ""
 			Write-Host "Applying NEW MULTITHREAD FIX AND UPDATING INGAME OPTIONS"
 			Write-Host ""
@@ -104,7 +104,7 @@ else {
 			
 			Remove-Item -Path "Template.xml" -Force -ErrorAction SilentlyContinue
 			Remove-Item -Path ".\PatchingD" -Force -Recurse -ErrorAction SilentlyContinue
-			Remove-Item -Path "main.zip" -Force -ErrorAction SilentlyContinue
+			Remove-Item -Path "Windows.zip" -Force -ErrorAction SilentlyContinue
 			
 			Write-Host "The Game has been patched. Colin MCRae DiRT will use $dirt_cores cores."
 			Delay 3
